@@ -45,6 +45,14 @@
 #dropmenu {
 	text-align:center;
 }
+#googleMap {
+	position:relative;
+	left:290px;
+}
+#getdirections {
+	position:relative;
+	left:290px;
+}
 /* .game-container {
     background: url('../img/retina_wood_@2X.png') repeat;
     padding: 1rem;

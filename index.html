@@ -28,6 +28,7 @@
 </head>
 
 <body>
+	<input id="pac-input" class="controls" type="text" placeholder="Search Box">
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -100,7 +101,7 @@
 				<h2 class="explore">You Should Explore</h2>
 				<div class="dropdown">
 					<select class="dropval">
-						<option value="0">Neighborhoods</option>
+						<option value="0" id="basic">Neighborhoods</option>
   						<option value="1" id="fredrop">Fremont</option>
  						<option value="2" id="baldrop">Ballard</option>
   						<option value="3" id="uddrop">University District</option>
@@ -111,9 +112,15 @@
 			</div>
 		</div>
 	</div>
-	<div id="mapid">
+	<div id="googleMap" style="width:500px;height:380px;">
 	</div>
-	<div class="container">
+	<form id="getdirections" action="http://maps.google.com/maps" method="get" target="_blank">
+		<label for="saddr"></label>
+		<input type="text" name="saddr" placeholder="Your Address"/>
+		<input type="hidden" id="directions" name="daddr" value="" />
+		<input type="submit" value="Get Directions"/>
+	</form>
+		<div class="container">
 		<div class="row">
 			<div class="col-12-md" id="youtubevideo">
 				<h2>Here's a recent show at</h2>
@@ -132,7 +139,7 @@
 	</script>
 
 	<script src="js/vendor/bootstrap.min.js"></script>
-
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9ouGTm-mrBydpza9Ah1GGnbJhJRDfxd4&libraries=places"></script>
 	<script src="js/main.js"></script>
 
 </body>

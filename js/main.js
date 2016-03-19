@@ -1,4 +1,4 @@
-var mymap = L.map('mapid').setView([47.6097, 122.3331], 13);
+//var mymap = L.map('mapid').setView([47.6097, 122.3331], 13);
 
 /* L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -9,19 +9,19 @@ var mymap = L.map('mapid').setView([47.6097, 122.3331], 13);
 
 
 // Text box pop up
- function dynInput(cbox) {
-  if (cbox.checked) {
-    var input = document.createElement("input");
-    input.type = "text";
-	input.id = cbox.value;
-	input.placeholder = input.id;
-    var div = document.createElement("div");
-    div.id = cbox.name;
-    div.appendChild(input);
-    document.getElementById("insertinputs").appendChild(div);
-  } else {
-    document.getElementById(cbox.name).remove();
-  }
+function dynInput(cbox) {
+	if (cbox.checked) {
+		var input = document.createElement("input");
+		input.type = "text";
+		input.id = cbox.value;
+		input.placeholder = input.id;
+		var div = document.createElement("div");
+		div.id = cbox.name;
+		div.appendChild(input);
+		document.getElementById("insertinputs").appendChild(div);
+	} else {
+		document.getElementById(cbox.name).remove();
+	}
 }
 
 function capHillExplore() {
@@ -34,6 +34,7 @@ function fremontExplore() {
 	$('#venuename').html("The Fremont Abbey");
 	$('#venuevideo').attr('src', 'https://www.youtube.com/embed/GdKPXYhIXF4');
 	$('#calendarlink').attr('href', 'http://fremontabbey.org/events/');
+	newLocation(47.6591888, -122.34968220000002);
 }
 
 function ballardExplore() {
@@ -69,14 +70,14 @@ function classCount() {
 	console.log("University District Venues: " + ud);
 	var dt = ($('input.universitydistrict:checked').length);
 	console.log("Downtown Venues: " + dt);
-	
+
 	var neighborhoodarray = [cap, fre, bal, ud, dt];
 	console.log(neighborhoodarray);
 	var largest = Math.max.apply(Math, neighborhoodarray);
 	console.log(largest);
 	var smallest = Math.min.apply(Math, neighborhoodarray);
 	console.log(smallest);
-	
+
 	if (largest == cap) {
 		$('.favoritehood').html("Capitol Hill");
 		console.log("Your Favorite Neighborhood is Capitol Hill");
@@ -93,8 +94,8 @@ function classCount() {
 		$('.favoritehood').html("Downtown");
 		console.log("Your Favorite Neighborhood is Downtown");
 	}
-	
-	
+
+
 	if (smallest == cap) {
 		$('.dropval').val('4');
 		console.log("You Should Explore Capitol Hill");
@@ -117,3 +118,31 @@ function classCount() {
 		downtownExplore();
 	}
 }
+$('.dropval').change(function(){
+	$(this).val();
+	var fredrop = $('#fredrop');
+	if ($(this).val() == 1) {
+		fremontExplore();
+	}
+});
+// Google Map
+var myCenter = new google.maps.LatLng(47.613843, -122.31971599999997);
+var map;
+function initialize() {
+	var mapProp = {
+		center: myCenter,
+		zoom: 13,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+}
+
+function newLocation(newLat, newLng) {
+	map.setCenter({
+		lat: newLat,
+		lng: newLng
+	});
+}
+
+
+google.maps.event.addDomListener(window, 'load', initialize);
