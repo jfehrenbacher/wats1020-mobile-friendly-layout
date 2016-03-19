@@ -14,6 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
  	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster|Quicksand">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<style>
 		body {
@@ -27,8 +28,8 @@
 	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 
-<body>
-	<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+<body background="img/background3.jpg">
+<!-- 	<input id="pac-input" class="controls" type="text" placeholder="Search Box"> -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -60,25 +61,55 @@
 			<div class="col-md-12">
 				<h1 class="title">Where Have You Been?</h1>
 					<form class="form" onsubmit="classCount();return false;">
-						<input type="checkbox" name="neumosbox" value="Neumos" class="capitolhill" onclick="dynInput(this);">Neumos
+						<label><input type="checkbox" name="neumosbox" value="Neumos" class="capitolhill" onclick="dynInput(this);">Neumos</label>
 						<br>
-						<input type="checkbox" name="chopsueybox" value="Chop Suey" class="capitolhill" onclick="dynInput(this);">Chop Suey
+						<label><input type="checkbox" name="chopsueybox" value="Chop Suey" class="capitolhill" onclick="dynInput(this);">Chop Suey</label>
 						<br>
-						<input type="checkbox" name="highlinebox" value="High Line" class="capitolhill" onclick="dynInput(this);">High Line
+						<label><input type="checkbox" name="highlinebox" value="High Line" class="capitolhill" onclick="dynInput(this);">High Line</label>
 						<br>
-						<input type="checkbox" name="neptunebox" value="Neptune" class="universitydistrict" onclick="dynInput(this);">Neptune
+						<label><input type="checkbox" name="barbozabox" value="Barboza" class="capitolhill" onclick="dynInput(this);">Barboza</label>
 						<br>
-						<input type="checkbox" name="abbeybox" value="Fremont Abbey" class="fremont" onclick="dynInput(this);">Fremont Abbey
+						<label><input type="checkbox" name="blacklodge" value="Black Lodge" class="capitolhill" onclick="dynInput(this);">The Black Lodge</label>
 						<br>
-						<input type="checkbox" name="highdivebox" value="The High Dive" class="fremont" onclick="dynInput(this);">The High Dive
+						<label><input type="checkbox" name="neptunebox" value="Neptune" class="universitydistrict" onclick="dynInput(this);">Neptune</label>
 						<br>
-						<input type="checkbox" name="nectarbox" value="Nectar" class="fremont" onclick="dynInput(this);">Nectar
+						<label><input type="checkbox" name="caferacer" value="Cafe Racer" class="universitydistrict" onclick="dynInput(this);">Cafe Racer</label>
 						<br>
-						<input type="checkbox" name="tractorbox" value="The Tractor Tavern" class="ballard" onclick="dynInput(this);">The Tractor Tavern
+						<label><input type="checkbox" name="thekraken" value="The Kraken" class="universitydistrict" onclick="dynInput(this);">The Kraken Lounge</label>
 						<br>
-						<input type="checkbox" name="sunsetbox" value="The Sunset" class="ballard" onclick="dynInput(this);">The Sunset
+						<label><input type="checkbox" name="abbeybox" value="Fremont Abbey" class="fremont" onclick="dynInput(this);">Fremont Abbey</label>
 						<br>
-						<input type="checkbox" name="crocodilebox" value="The Crocodile" class="downtown" onclick="dynInput(this);">The Crocodile
+						<label><input type="checkbox" name="highdivebox" value="The High Dive" class="fremont" onclick="dynInput(this);">The High Dive</label>
+						<br>
+						<label><input type="checkbox" name="nectarbox" value="Nectar" class="fremont" onclick="dynInput(this);">Nectar</label>
+						<br>
+						<label><input type="checkbox" name="substationbox" value="Substation" class="fremont" onclick="dynInput(this);">Substation</label>
+						<br>
+						<label><input type="checkbox" name="tractorbox" value="The Tractor Tavern" class="ballard" onclick="dynInput(this);">The Tractor Tavern</label>
+						<br>
+						<label><input type="checkbox" name="sunsetbox" value="The Sunset" class="ballard" onclick="dynInput(this);">The Sunset</label>
+						<br>
+						<label><input type="checkbox" name="egans" value="Egans" class="ballard" onclick="dynInput(this);">Egan's Ballard Jam House</label>
+						<br>
+						<label><input type="checkbox" name="thejosephine" value="The Josephine" class="ballard" onclick="dynInput(this);">The Josephine</label>
+						<br>
+						<label><input type="checkbox" name="ballardhomestead" value="Ballard Homestead" class="ballard" onclick="dynInput(this);">Ballard Homestead</label>
+						<br>
+						<label><input type="checkbox" name="crocodilebox" value="The Crocodile" class="downtown" onclick="dynInput(this);">The Crocodile</label>
+						<br>
+						<label><input type="checkbox" name="elcorazon" value="El Corazon" class="downtown" onclick="dynInput(this);">El Corazon</label>
+						<br>
+						<label><input type="checkbox" name="theveraproject" value="The Vera Project" class="downtown" onclick="dynInput(this);">The Vera Project</label>
+						<br>
+						<label><input type="checkbox" name="thetripledoor" value="The Triple Door" class="downtown" onclick="dynInput(this);">The Triple Door</label>
+						<br>
+						<label><input type="checkbox" name="showboxmarket" value="Showbox at the Market" class="downtown" onclick="dynInput(this);">Showbox at the Market</label>
+						<br>
+						<label><input type="checkbox" name="showboxsodo" value="Showbox Sodo" class="downtown" onclick="dynInput(this);">Showbox SODO</label>
+						<br>
+						<label><input type="checkbox" name="paramount" value="Paramount" class="downtown" onclick="dynInput(this);">Paramount Theatre</label>
+						<br>
+						<label><input type="checkbox" name="themoore" value="The Moore" class="downtown" onclick="dynInput(this);">The Moore</label>
 						<br>
 						<p id="insertinputs"></p>
 						<br>
@@ -90,7 +121,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2 class="favorite">Your Favorite Neighborhood Is:</h2>
+				<h2 class="favorite">Your Favorite Neighborhood Is...</h2>
 					<h3 class="favoritehood"></h3>
 			</div>
 		</div>
@@ -98,7 +129,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2 class="explore">You Should Explore</h2>
+				<h2 class="explore">You Should Explore...</h2>
+				<h2 class="explorehood"></h2>
 				<div class="dropdown">
 					<select class="dropval">
 						<option value="0" id="basic">Neighborhoods</option>
@@ -112,7 +144,13 @@
 			</div>
 		</div>
 	</div>
-	<div id="googleMap" style="width:500px;height:380px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-12-md">
+				<div id="googleMap" style="width:100%;height:380px;">
+				</div>
+			</div>
+		</div>
 	</div>
 	<form id="getdirections" action="http://maps.google.com/maps" method="get" target="_blank">
 		<label for="saddr"></label>
@@ -123,14 +161,20 @@
 		<div class="container">
 		<div class="row">
 			<div class="col-12-md" id="youtubevideo">
-				<h2>Here's a recent show at</h2>
+				<h2 class="recentshow">Here's a recent show at</h2>
 				<h2 id="venuename"></h2>
 				<iframe width="560" height="315" src="" frameborder="0" id="venuevideo" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>
 	<div id="upcoming">
-		<h2><a id="calendarlink" href="">Here</a> is a link to their calendar</h2>
+		<h2 id="calendartext"><a id="calendarlink" href="">Here</a> is a link to their calendar</h2>
+	</div>
+	<div class="container" id="footer">
+		<div class="row">
+			<div class="col-12-md">
+			</div>
+		</div>
 	</div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
