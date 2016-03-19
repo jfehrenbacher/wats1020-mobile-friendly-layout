@@ -3,7 +3,49 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-.game-container {
+
+#mapid {
+	height:300px;
+}
+
+
+.title {
+	text-align: center;
+}
+
+.form {
+	width:300px;
+	margin: 0 auto;
+}
+
+.favorite {
+	text-align:center;
+}
+
+.favoritehood {
+	text-align:center;
+}
+
+.explore {
+	text-align:center;
+}
+.dropdown {
+	text-align:center;
+}
+
+#youtubevideo {
+	text-align:center;
+}
+#upcoming {
+	text-align:center;
+}
+#insertinputs {
+	margin-bottom:-15px;
+}
+#dropmenu {
+	text-align:center;
+}
+/* .game-container {
     background: url('../img/retina_wood_@2X.png') repeat;
     padding: 1rem;
     overflow: hidden;
@@ -71,7 +113,7 @@ tr:not(:first-child):hover {
 }
 
 
-
+ */
 
 
 
