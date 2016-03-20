@@ -1,12 +1,3 @@
-//var mymap = L.map('mapid').setView([47.6097, 122.3331], 13);
-
-/* L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    maxZoom: 18,
-    id: 'your.mapbox.project.id',
-    accessToken: 'your.mapbox.public.access.token'
-}).addTo(mymap); */
-
 
 // Text box pop up
 function dynInput(cbox) {
@@ -77,7 +68,7 @@ function classCount() {
 	console.log("Ballard Venues: " + bal);
 	var ud = ($('input.universitydistrict:checked').length);
 	console.log("University District Venues: " + ud);
-	var dt = ($('input.universitydistrict:checked').length);
+	var dt = ($('input.downtown:checked').length);
 	console.log("Downtown Venues: " + dt);
 
 	var neighborhoodarray = [cap, fre, bal, ud, dt];
@@ -227,6 +218,11 @@ function newLocation(newLat, newLng) {
 		lng: newLng
 	});
 }
+$("#submit").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#submit").offset().top},
+        'slow');
+});
 
 
 google.maps.event.addDomListener(window, 'load', initialize);
